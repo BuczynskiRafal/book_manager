@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %} Book list {% endblock %}
+{% block site %}
+<div class="card" >
+    <form method="GET" action="">
+        <input type="text" name="title" placeholder="title"/><br>
+        <input type="text" name="author" placeholder="author"/><br>
+        <input type="text" name="language" placeholder="language"/><br>
+        <input type="number" name="start" placeholder="year start"/><br>
+        <input type="number" name="end" placeholder="year end"/><br>
+        <button type="submit" class="btn btn-success" style="width: 5rem;">Search</button>
+    </form>
+</div>
+<div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Language</th>
+          <th scope="col">Published</th>
+          <th scope="col">Pages</th>
+          <th scope="col">ISBN 10</th>
+          <th scope="col">ISBN 13</th>
+          <th scope="col">Image links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for book in queryset %}
+            <tr onclick="window.location='b/{{ book.id }}/';">
+              <th scope="row">{{book.id}}</th>
+              <td> {{book.title}} </td>
+              <td> {{book.authors}} </td>
+              <td>{{book.language}}</td>
+              <td> {{book.published_date}} </td>
+              <td> {{book.page_count}} </td>
+              <td> {{book.isbn_10}} </td>
+              <td> {{book.isbn_13}} </td>
+              <td> {{book.image_links}} </td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock %}

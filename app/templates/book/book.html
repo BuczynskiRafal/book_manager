@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %} Single book {% endblock %}
+
+{% block site %}
+<div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Language</th>
+          <th scope="col">Published</th>
+          <th scope="col">Pages</th>
+          <th scope="col">ISBN 10</th>
+          <th scope="col">ISBN 13</th>
+          <th scope="col">Image links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ book }}
+            <tr>
+              <th scope="row">{{book.pk}}</th>
+              <td> {{book.title}} </td>
+              <td> {{book.authors}} </td>
+              <td> {{book.language}}</td>
+              <td> {{book.published_date}} </td>
+              <td> {{book.page_count}} </td>
+              <td> {{book.isbn_10}} </td>
+              <td> {{book.isbn_13}} </td>
+              <td> {{book.image_links}} </td>
+            </tr>
+
+      </tbody>
+    </table>
+</div>
+<div>
+    <form method="POST" action=>
+        <a href="{% url 'list' %}" class="btn btn-success" style="width: 5rem;">Back</a>
+        <a href="{% url 'edit_book' book.id %}" class="btn btn-success" style="width: 5rem;">Edit</a>
+        <a href="{% url 'delete_book' book.id %}" class="btn btn-danger" style="width: 5rem;">Delete</a>
+    </form>
+</div>
+{% endblock %}

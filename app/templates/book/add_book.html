@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %} Add book {% endblock %}
+{% block site %}
+<div class="card" style="width: 30rem;">
+    <form method="POST" action=>
+        {% csrf_token %}
+        {{book_form | bootstrap }}
+        {% if new  %}
+            <button type="submit" class="btn btn-success" style="width: 5rem;">Add</button>
+        {% else %}
+            <button type="submit" class="btn btn-success" style="width: 5rem;">Edit</button>
+        {%endif%}
+        <a href="{% url 'list' %}" class="btn btn-danger" style="width: 5rem;">Cancel</a>
+    </form>
+</div>
+{% endblock %}

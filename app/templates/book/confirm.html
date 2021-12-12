@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Confirm {% endblock %}
+
+{% block site %}
+<div class="card" style="width: 36rem;">
+    <div class="card-body">
+      <h5 class="card-title">Confirm you want to delete {{ book.title }}</h5>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger" style="width: 5rem;">Delete</button>
+            <a href="{% url 'single_book' book.id %}" class="btn btn-success" style="width: 5rem;">Back</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
