@@ -24,7 +24,7 @@ Go to see site online:
 * 
 * https://books-manager-rafal-buczynski.herokuapp.com to see book list.
 * https://books-manager-rafal-buczynski.herokuapp.com/b/1 to see single book.
-* https://books-manager-rafal-buczynski.herokuapp.com/b/add/ to add new book.
+* https://books-manager-rafal-buczynski.herokuapp.com/b/add to add new book.
 * https://books-manager-rafal-buczynski.herokuapp.com/b/edit/1 to add edit selected book.
 * https://books-manager-rafal-buczynski.herokuapp.com/b/delete/1 to add delete selected book.
 * https://books-manager-rafal-buczynski.herokuapp.com/b/import to import book from google books. 
