@@ -2,6 +2,17 @@
 
 The application built in python django allows you to manage a collection of books..
 
+Go to see site online: 
+* https://books-manager-rafal-buczynski.herokuapp.com to see book list.
+* https://books-manager-rafal-buczynski.herokuapp.com/b/1 to see single book.
+* https://books-manager-rafal-buczynski.herokuapp.com/b/add to add new book.
+* https://books-manager-rafal-buczynski.herokuapp.com/b/edit/1 to add edit selected book.
+* https://books-manager-rafal-buczynski.herokuapp.com/b/delete/1 to add delete selected book.
+* https://books-manager-rafal-buczynski.herokuapp.com/b/import to import book from google books. 
+
+See API documentation:
+* https://documenter.getpostman.com/view/16990944/UVR5q8gg
+
 ## Setup
 
 Requires Python 3
@@ -18,20 +29,6 @@ Run these commands:
 # Run
 
     python manage.py runserver
-    
-Go to see site online:
-* https://books-manager-rafal-buczynski.herokuapp.com/admin/ to manage the data.
-* 
-* https://books-manager-rafal-buczynski.herokuapp.com to see book list.
-* https://books-manager-rafal-buczynski.herokuapp.com/b/1 to see single book.
-* https://books-manager-rafal-buczynski.herokuapp.com/b/add to add new book.
-* https://books-manager-rafal-buczynski.herokuapp.com/b/edit/1 to add edit selected book.
-* https://books-manager-rafal-buczynski.herokuapp.com/b/delete/1 to add delete selected book.
-* https://books-manager-rafal-buczynski.herokuapp.com/b/import to import book from google books. 
-* 
-* https://books-manager-rafal-buczynski.herokuapp.com/api/ to see api view for book list.
-* https://books-manager-rafal-buczynski.herokuapp.com/api/1 to see api view for single book and manage book.
-* https://books-manager-rafal-buczynski.herokuapp.com/api/?search=text to filter and search.
 
 Development Mode
 * http://127.0.0.1:8000 to see book list.
